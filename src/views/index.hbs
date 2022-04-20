@@ -9,3 +9,13 @@
     </div>
     <button type="submit" name="subimit">Enviar</button>
 </form>
+
+
+{{#each tasks}}
+    <div>
+        <h3>{{title}}</h3>
+        <p>{{description}}</p>
+        <button>Editar</button>
+        <button>Eliminar</button>
+    </div>
+{{/each}}
