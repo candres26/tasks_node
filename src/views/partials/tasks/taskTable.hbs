@@ -1,4 +1,4 @@
-<table>
+<table class="table table-bordered table-hover table-dark">
     <thead>
         <tr>
             <th>No.</th>
@@ -16,13 +16,19 @@
                 <td>
                     <a href="/done/{{_id}}">
                         {{#if done}}
-                            <span class="glyphicon glyphicon-ok">Sin hacer</span>
+                            <span class="btn btn-dark">Sin hacer</span>
                         {{else}}
-                            <span class="glyphicon glyphicon-remove">Hecha</span>
+                            <span class="btn btn-success">Hecha</span>
                         {{/if}}
                     </a>
-                    <a href="/edit/{{_id}}">Editar</a>
-                    <a href="/delete/{{_id}}">Eliminar</a>
+                    <a href="/edit/{{_id}}" class="btn btn-info">Editar</a>
+                    <a href="/delete/{{_id}}" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        {{else}}
+            <tr class="text-center">
+                <td colspan="4">
+                    <h3>No hay tareas</h3>
                 </td>
             </tr>
         {{/each}}
